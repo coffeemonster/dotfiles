@@ -1,0 +1,85 @@
+#term xterm-colour
+
+# enable alternate screen
+altscreen on
+
+# I hate visual bell!
+vbell off
+
+# disable startup message.
+startup_message off
+
+# make a large amount of scroolback
+defscrollback 10000
+
+# display running command in titlebar
+# (see also .bashrc, where PROMPT_COMMAND is set)
+shelltitle '] |bash'
+
+# display list of screens in titlebar
+#hardstatus string "[%w] %h"
+
+caption always "%?%F%{= Kw}%:%{=u kR}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
+hardstatus alwayslastline "%{= kR} %-Lw%{=b Kw} %n%f %t %{-}%+Lw %=%{= dd}"
+
+# 
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+
+#
+# KEY BINDINGS
+#
+
+# Ctrl-Right creates a new screen
+bindkey "\033[1;5C" next
+
+# Shift Left/Right switch to prev/next screen
+bindkey "\033[1;5D" prev
+bindkey "\033[1;2C" next
+bind , prev
+bind . next
+
+# Ctrl-Insert splits current screen, and creates a new shell
+bindkey "\033[2;5~" eval 'split' 'focus' 'screen'
+
+# Ctrl-Delete removes the current split
+bindkey "\033[3;5~" eval 'remove'
+
+# Shift-Up/Down move focus to prev/next split
+bindkey "\033[1;2A" focus up
+bindkey "\033[1;2B" focus down
+
+# Ctrl-Up/Down resize the current split
+bindkey "\033[1;5A" resize +5
+bindkey "\033[1;5B" resize -5
+
+# Bind Function keys to open screen tabs
+# k1=<F1>, k2=<F2>, etc..
+bindkey -k k1 select 1
+bindkey -k k2 select 2
+bindkey -k k3 select 3
+bindkey -k k4 select 4
+bindkey -k k5 select 5
+
+# Let's remove some dangerous key bindings ...
+bind k kill # "ctl-a k" kill
+bind K kill
+bind ^\
+bind \\
+bind ^h
+bind h
+
+# Get screen working with 256 cols  
+#       http://www.frexx.de/xterm-256-notes/
+#
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+term xterm-256color
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo xterm*|gnome* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l
+
+# erase background with current bg color
+defbce "on" 
+

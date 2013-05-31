@@ -1,0 +1,10 @@
+
+# Always do 'git pull --rebase'
+# http://blog.woobling.org/2009/08/git-rebase-for-impatient.html
+[branch]
+    autosetuprebase = always
+
+[user]
+    name = Alister West
+    email= alister@alisterwest.com
+

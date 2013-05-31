@@ -1,0 +1,4 @@
+
+# to tab complete symlinks.
+set mark-symlinked-directories on
+
