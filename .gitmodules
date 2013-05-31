@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/colors-all-bundle"]
     path = .vim/bundle/colors-all-bundle
     url = git://github.com/flazz/vim-colorschemes.git
-    # url = https://github.com/durdn/vim-colors-solarized.git
-    # url = git://github.com/vim-scripts/desert256.vim.git
-    # url = git://github.com/vim-scripts/Zenburn.git 
 [submodule ".vim/bundle/easymotion"]
     path = .vim/bundle/easymotion
     url = git://github.com/Lokaltog/vim-easymotion.git
@@ -25,7 +22,6 @@
 [submodule ".vim/bundle/markdown"]
     path = .vim/bundle/markdown
     url = git://github.com/tpope/vim-markdown.git
-    # alt-url = https://github.com/plasticboy/vim-markdown.git
 [submodule ".vim/bundle/markdown-folding"]
     path = .vim/bundle/markdown-folding
     url = git://github.com/nelstrom/vim-markdown-folding.git
