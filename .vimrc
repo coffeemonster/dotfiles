@@ -65,7 +65,7 @@ set background=dark
 "colorscheme desert             " 16 colour
 "colorscheme ps_color
 "colorscheme xoria256           " 256 colour
-colorscheme desert256           " 256 colour
+"colorscheme desert256           " 256 colour
 "colorscheme zenburn             " 256 colour
 "colorscheme gardener            " 256 colour
 "colorscheme inkpot              " 256 colour
