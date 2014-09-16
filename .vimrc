@@ -1,3 +1,6 @@
+" Pathogen - runtime loading of vim plugins in .vim/bundle/<plugin>/
+execute pathogen#infect()
+
 " Essentials at the top so can easy copy and paste
 syntax on
 
@@ -65,7 +68,7 @@ set background=dark
 "colorscheme desert             " 16 colour
 "colorscheme ps_color
 "colorscheme xoria256           " 256 colour
-"colorscheme desert256           " 256 colour
+colorscheme desert256           " 256 colour
 "colorscheme zenburn             " 256 colour
 "colorscheme gardener            " 256 colour
 "colorscheme inkpot              " 256 colour
@@ -82,6 +85,7 @@ au BufNewFile,BufRead syshandler set filetype=mason
 au BufNewFile,BufRead dhandler set filetype=mason
 au BufNewFile,BufRead *.html set filetype=mason
 au BufNewFile,BufRead *.sql set filetype=mysql
+filetype plugin indent on
 
 " Map shift-arrow movement to scroll up/down
 map <s-down> <c-e>
