@@ -1,6 +1,10 @@
- 
+# .bashrc for alister.west
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+# disable mac "zsh is now default" msg
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Some standard stuff
 shopt -s histappend # append to $HISTFILE
@@ -36,8 +40,4 @@ if [ -f /etc/bash_completion ]; then
     PS1="${HILIT}[$USER@$HOSTNAME]$NC \w \$(__git_ps1 ' (%s)')\n\t > "
 fi
 
-export PATH=/home/alister/bin/:/home/alister/perl5/bin/:$PATH
-eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
-
-function r () { ssh gtalister@$@.nmsrv.com; }
-
+export PATH=/home/alister/bin/:$PATH

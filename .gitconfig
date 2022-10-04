@@ -8,3 +8,5 @@
     name = Alister West
     email= alister@alisterwest.com
 
+[core]
+	excludesfile = /Users/alister/.gitignore
