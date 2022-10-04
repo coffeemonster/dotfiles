@@ -1,5 +1,5 @@
 # Makefile to install dotfiles
-BASH_FILES := .bashrc .gitconfig .gitignore .gitmodules .inputrc .screenrc .vimrc
+BASH_FILES := .bashrc .bash_profile .gitconfig .gitignore .gitmodules .inputrc .screenrc .vim .vimrc
 PROJ_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 DEST := ${HOME}
 
